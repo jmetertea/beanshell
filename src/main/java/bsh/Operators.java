@@ -386,7 +386,7 @@ class Operators implements ParserConstants {
                 return lhs - rhs;
 
             case STAR:
-                if ( Double.MAX_VALUE / lhs < rhs )
+                if ( lhs != 0 && Double.MAX_VALUE / lhs < rhs )
                     break;
                 return lhs * rhs;
 
